@@ -1,0 +1,26 @@
+{
+  "name": "line-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "npm-run-all --serial install:*",
+    "install:main": "cd main && yarn install",
+    "install:3d-module": "cd 3d-module && yarn install",
+    "start": "npm-run-all --parallel start:*",
+    "start:3d-module": "cd 3d-module && yarn start",
+    "start:main": "cd main && yarn serve",
+    "build": "npm-run-all --serial build:*",
+    "build:main": "cd main && yarn build",
+    "build:3d-module": "cd 3d-module && yarn build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "cesium": "^1.78.0"
+  }
+}
