@@ -6,11 +6,12 @@ import { Message } from 'element-ui'
 import {
   registerMicroApps,
   addGlobalUncaughtErrorHandler,
-  start,
+  start
 } from 'qiankun'
 
 // 子应用注册信息
 import apps from './app'
+
 
 /**
  * 注册子应用
@@ -20,6 +21,7 @@ import apps from './app'
 registerMicroApps(apps, {
   // qiankun 生命周期钩子 - 加载前
   beforeLoad: (app) => {
+    console.log(app, 'app')
     // 加载子应用前，加载进度条
     NProgress.start()
     console.log("before load", app.name)

@@ -1,16 +1,11 @@
-import React, { useEffect } from 'react'
-import smart3d from 'smart3d'
+import React from 'react'
+import MapContainer from './component/map'
 import './App.css'
 
 function App() {
 
-  useEffect(() => {
-    new smart3d.Viewer('map')
-  }, [])
-
   return (
-    <div className="App" id="map">
-    </div>
+    <MapContainer/>
   )
 }
 

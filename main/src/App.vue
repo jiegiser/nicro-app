@@ -30,8 +30,9 @@
   display: flex;
   flex-direction: column;
   .container{
-    height: calc(100vh);
-    overflow: hidden;
+    height: 100%;
+    font-size: 18px;
+    // overflow: hidden;
   }
 }
 .app-header {
